@@ -8,17 +8,20 @@ import Plane from "../models/Plane.jsx";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
+  const [currentStage, setCurrentStage] = useState(1);
 
   const adjustIslandForScreenSize = () => {
-    let screenScale = null;
-    let screenPosition = [0, -6.5, -43];
+    let screenScale, screenPosition;
     let rotation = [0.1, 4.7, 0];
 
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [0, -6.5, -43.4];
     } else {
       screenScale = [1, 1, 1];
+      screenPosition = [0, -6.5, -43.4];
     }
+
     return [screenScale, screenPosition, rotation];
   };
 
@@ -67,12 +70,13 @@ const Home = () => {
             rotation={islandRotation}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
+            setCurrentStage={setCurrentStage}
           />
           <Plane
             isRotating={isRotating}
             planeScale={planeScale}
             planePosition={planePosition}
-            rotation={[0, 20, 0]}
+            rotation={[0, 20.1, 0]}
           />
         </Suspense>
       </Canvas>
