@@ -166,7 +166,7 @@ export const projects = [
     name: "3D Portfolio Website",
     description:
       "Made this awesome 3D portfolio website using a tutorial as a foundation and customized it to align with my visual preferences and aesthetic.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
+    link: "https://github.com/Jebbis/PortofolioWebsite",
   },
   {
     iconUrl: snapgram,
