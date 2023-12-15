@@ -1,7 +1,7 @@
 # Project Name
-> This is a Notion like note taking app.
+> Portfolio website to showcase my skills 
 
-> Live demo [_here_](https://noteapp-jebbis.vercel.app/). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](https://lassehamalainen.fi//). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -18,39 +18,22 @@
 
 
 ## General Information
-- The aim of this project was to learn new skills and how to structure a bigger project
+- The aim of this project was to get a place for myself to showcase my skills and learn to use 3D objects in react project
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
-- Next.JS - version 13.5.4
-- Typescript - version 5.0
+- React - version 18.2
+- Threejs - version 0.157
 - Tailwind CSS - version 3.0
-- Edge Store - version 0.1.4
-- Clerk - version 4.26.3
-- Convex - version 1.6.2
 
 
 ## Features
-List the ready features here:
-- Real-time database
-- Notion-style editor
-- Light and Dark mode 
-- Infinite children documents
-- Trash can & soft delete
-- Authentication
-- File upload
-- File deletion
-- File replacement 
-- Icons for each document (changes in real-time)
-- Expandable sidebar
-- Full mobile responsiveness
-- Publish your note for sharing
-- Fully collapsable sidebar
-- Landing page
-- Cover image of each document
-- Recover deleted files
-
+- 3D Objects that are moving
+- Flying with the plane
+- Darkmode for frontpage
+- Music
+- Contact form
 
 ## Screenshots
 ![Example screenshot](./img/Front.png)
@@ -62,32 +45,24 @@ List the ready features here:
 
 
 ## Setup
-To run this project you need Convex, Clerk and Edge Store accounts and setup environments to get secret keys
+To run this project you need emailjs account and setup environment to get secret keys (not necessary but form does not work)
 
-Cloning the repository `git clone https://github.com/Jebbis/Notion.git`
+Cloning the repository `git clone https://github.com/Jebbis/PortofolioWebsite`
 
 Install dependecies `npm i`
 
 Setup .env.local file 
 ```
-CONVEX_DEPLOYMENT=
-NEXT_PUBLIC_CONVEX_URL=
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-EDGE_STORE_ACCESS_KEY=
-EDGE_STORE_SECRET_KEY=
+VITE_APP_EMAILJS_SERVICE_ID=
+VITE_APP_EMAILJS_TEMPLATE_ID=
+VITE_APP_EMAILJS_PUBLIC_KEY=
 ```
-
-Start Convex `npx convex dev`
 
 Start the app `npm run dev`
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
+You can move the plane with arrow keys or with mouse dragging
 
 
 ## Project Status
@@ -97,14 +72,15 @@ Project is:  _complete_
 ## Room for Improvement
 
 Further development:
-- Create more custom editor stylings
+- Create own custom 3D models for the website
 
 
 ## Acknowledgements
-- This project was based on [this tutorial](https://www.youtube.com/watch?v=0OaDyjB9Ib8).
-  
+- The foundation of this project is based on [this tutorial](https://www.youtube.com/watch?v=FkowOdMjvYo).
+- I have made several new features to customize it to align with my visual preferences and aesthetic.
 
 ## Contact
+[LinkedIn](https://www.linkedin.com/in/lasse-h%C3%A4m%C3%A4l%C3%A4inen-09b869181/)
 Discord - lasse0
 
 
