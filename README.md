@@ -1,4 +1,4 @@
-# Project Name
+# Portfolio Website
 > Portfolio website to showcase my skills 
 
 > Live demo [_here_](https://lassehamalainen.fi//). <!-- If you have the project hosted somewhere, include the link here. -->
