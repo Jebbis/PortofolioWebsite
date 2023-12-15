@@ -81,6 +81,7 @@ Further development:
 
 ## Contact
 [LinkedIn](https://www.linkedin.com/in/lasse-h%C3%A4m%C3%A4l%C3%A4inen-09b869181/)
+
 Discord - lasse0
 
 
