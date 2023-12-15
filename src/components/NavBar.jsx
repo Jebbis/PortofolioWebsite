@@ -10,11 +10,13 @@ function NavBar() {
   const location = useLocation();
   return (
     <div
-      className={cn("z-50 fixed top-0 flex items-center w-full p-9", {
-        "bg-black/70": darkMode && location.pathname === "/",
-        "bg-[#F5F7F9]": !darkMode && location.pathname !== "/",
-        "border-b shadow-sm": scrolled,
-      })}
+      className={cn(
+        "z-50 fixed top-0 flex items-center w-full p-9 bg-[#F5F7F9]",
+        {
+          "bg-black/70": darkMode && location.pathname === "/",
+          "border-b shadow-sm": scrolled,
+        }
+      )}
     >
       <header className="header">
         <NavLink
