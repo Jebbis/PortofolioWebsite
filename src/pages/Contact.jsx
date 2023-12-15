@@ -90,7 +90,7 @@ const Contact = () => {
               type="text"
               name="name"
               className="input"
-              placeholder="John"
+              placeholder="Average Joe"
               required
               value={form.name}
               onChange={handleChange}
@@ -104,7 +104,7 @@ const Contact = () => {
               type="email"
               name="email"
               className="input"
-              placeholder="John@gmail.com"
+              placeholder="average@joe.com"
               required
               value={form.email}
               onChange={handleChange}
@@ -118,7 +118,7 @@ const Contact = () => {
               name="message"
               rows="4"
               className="textarea"
-              placeholder="Write your thoughts here..."
+              placeholder="Tell me what you have in mind..."
               value={form.message}
               onChange={handleChange}
               onFocus={handleFocus}
@@ -138,7 +138,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] ">
+      <div className="lg:w-1/2 w-full lg:h-[750px] md:h-[550px] h-[350px] ">
         <Canvas
           camera={{
             position: [0, 0, 5],

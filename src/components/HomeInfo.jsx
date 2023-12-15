@@ -18,29 +18,36 @@ const renderContent = {
   1: (
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
       Hi, I am <span className="font-semibold">Lasse</span> 👋 <br /> A Software
-      Developer from Finland.
+      Developer from Finland. <br /> Move through the island using mouse or ⬅️➡️
+      keys!
     </h1>
   ),
   2: (
     <InfoBox
-      text="Worked with many companies and picked up many skills along the way"
+      text="I've picked up quite a bag of skills on my journey."
       link="/about"
       btnText="Learn more"
     />
   ),
   3: (
     <InfoBox
-      text="Led multiple projects to success over the yeards "
+      text="To showcase my skills I have gathered some of my projects here!"
       link="/projects"
       btnText="Visit portfolio"
     />
   ),
   4: (
     <InfoBox
-      text="Need a software developer?"
+      text="Contact me for your next adventure!"
       link="/contact"
       btnText="Let's talk"
     />
+  ),
+  5: (
+    <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
+      Have you tried turning on the sounds 🔊 and darkmode 🌙 <br /> from the
+      bottom of the screen?
+    </h1>
   ),
 };
 
