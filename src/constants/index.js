@@ -126,11 +126,6 @@ export const schools = [
 
 export const socialLinks = [
   {
-    name: "Contact",
-    iconUrl: contact,
-    link: "/contact",
-  },
-  {
     name: "GitHub",
     iconUrl: github,
     link: "https://github.com/Jebbis",

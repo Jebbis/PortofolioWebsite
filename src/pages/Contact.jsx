@@ -1,6 +1,7 @@
 import { Suspense, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
+import { socialLinks } from "../constants";
 
 import Fox from "../models/Fox";
 import Loader from "../components/Loader";
@@ -32,9 +33,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Lasse",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "lassejesperihamalainen@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -78,7 +79,25 @@ const Contact = () => {
 
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
-
+        <div className="mt-16 flex flex-wrap gap-12 ">
+          {socialLinks.map((link) => (
+            <div key={link.name} className="block-container w-20 h-20 group ">
+              <div className="z-10 hidden group-hover:block absolute w-auto p-2 m-2 min-w-max top-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold">
+                {link.name}
+              </div>
+              <div className="btn-back rounded-xl" />
+              <div
+                className="btn-front rounded-xl flex justify-center items-center hover:cursor-pointer"
+                onClick={() => window.open(link.link, "_blank")}
+              >
+                <img
+                  src={link.iconUrl}
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
