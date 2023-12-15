@@ -1,4 +1,5 @@
 import { Suspense, useState, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Island from "../models/island.jsx";
@@ -11,15 +12,16 @@ import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons/index.js";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
+import { DarkModeContext } from "../providers/themeProvider.jsx";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
+  audioRef.current.volume = 0.35;
   audioRef.current.loop = true;
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -77,18 +79,18 @@ const Home = () => {
         <Suspense fallback={<Loader />}>
           {darkMode ? (
             <>
-              <directionalLight position={[1, 1, 1]} intensity={0.05} />
+              <directionalLight position={[1, 1, 1]} intensity={0.02} />
               <ambientLight intensity={0.01} />
               <hemisphereLight
                 skyColor="#b1e1ff"
                 groundColor="#000000"
-                intensity={0.0}
+                intensity={0.01}
               />
               <pointLight
                 position={[0, 1, 0.15]}
-                distance={30}
+                distance={32}
                 intensity={200}
-                color={"#FFB16E"}
+                color={"#FFC18D"}
                 castShadow
               />
               <Stars isRotating={isRotating} />
@@ -125,7 +127,7 @@ const Home = () => {
         </Suspense>
       </Canvas>
       <div>
-        <div className="absolute bottom-2 right-2">
+        <div className="absolute bottom-2 left-14">
           {darkMode ? (
             <MdOutlineDarkMode
               size={30}
@@ -154,5 +156,3 @@ const Home = () => {
 };
 
 export default Home;
-
-//1:13:06

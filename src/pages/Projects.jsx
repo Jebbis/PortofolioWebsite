@@ -5,7 +5,7 @@ import CTA from "../components/CTA";
 
 const Projects = () => {
   return (
-    <section className="max-container h-[100vh]">
+    <section className="max-container min:h-[100vh]">
       <h1 className="head-text">
         My{" "}
         <span className="blue-gradient_text font-semibold drop-shadow-sm">
