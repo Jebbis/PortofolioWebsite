@@ -152,7 +152,7 @@ export const projects = [
     name: "Storage App",
     description:
       "Developed a web application which acts as a admin dashboard. Where user can create clients that can have storages and track the storages",
-    link: "https://github.com/Jebbis",
+    link: "https://github.com/Jebbis/stroageapp",
   },
 
   {
