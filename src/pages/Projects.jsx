@@ -5,7 +5,7 @@ import CTA from "../components/CTA";
 
 const Projects = () => {
   return (
-    <section className="max-container">
+    <section className="max-container h-[100vh]">
       <h1 className="head-text">
         My{" "}
         <span className="blue-gradient_text font-semibold drop-shadow-sm">
@@ -41,7 +41,7 @@ const Projects = () => {
                   rel="noopener noreferer"
                   className="font-semibold text-blue-500"
                 >
-                  Live Link
+                  Link
                 </Link>
                 <img
                   src={arrow}

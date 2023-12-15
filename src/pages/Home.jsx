@@ -3,11 +3,14 @@ import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Island from "../models/island.jsx";
 import Sky from "../models/sky.jsx";
+import Stars from "../models/stars.jsx";
 import Bird from "../models/Bird.jsx";
 import Plane from "../models/Plane.jsx";
 import HomeInfo from "../components/HomeInfo.jsx";
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons/index.js";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -16,6 +19,7 @@ const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -71,15 +75,39 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1, 1, 1]} intensity={2} />
-          <ambientLight intensity={0.5} />
-          <hemisphereLight
-            skyColor="#b1e1ff"
-            groundColor="#000000"
-            intensity={1}
-          />
+          {darkMode ? (
+            <>
+              <directionalLight position={[1, 1, 1]} intensity={0.05} />
+              <ambientLight intensity={0.01} />
+              <hemisphereLight
+                skyColor="#b1e1ff"
+                groundColor="#000000"
+                intensity={0.0}
+              />
+              <pointLight
+                position={[0, 1, 0.15]}
+                distance={30}
+                intensity={200}
+                color={"#FFB16E"}
+                castShadow
+              />
+              <Stars isRotating={isRotating} />
+            </>
+          ) : (
+            <>
+              <Sky isRotating={isRotating} />
+              <directionalLight position={[1, 1, 1]} intensity={2} />
+              <ambientLight intensity={0.5} />
+              <hemisphereLight
+                skyColor="#b1e1ff"
+                groundColor="#000000"
+                intensity={1}
+              />
+            </>
+          )}
+
           <Bird />
-          <Sky isRotating={isRotating} />
+
           <Island
             position={islandPosition}
             scale={islandScale}
@@ -96,13 +124,30 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-      <div className="absolute bottom-2 left-2">
-        <img
-          src={!isPlayingMusic ? soundoff : soundon}
-          alt="sound"
-          className="w-10 h-10 cursor-pointer object-contain"
-          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-        />
+      <div>
+        <div className="absolute bottom-2 right-2">
+          {darkMode ? (
+            <MdOutlineDarkMode
+              size={30}
+              onClick={() => setDarkMode(!darkMode)}
+              className="cursor-pointer bg-slate-200 rounded-[50%] px-1.5 w-10 h-10"
+            />
+          ) : (
+            <MdOutlineLightMode
+              size={30}
+              onClick={() => setDarkMode(!darkMode)}
+              className="cursor-pointer bg-black-500/20 rounded-[50%] px-1.5 w-10 h-10"
+            />
+          )}
+        </div>
+        <div className="absolute bottom-2 left-2">
+          <img
+            src={!isPlayingMusic ? soundoff : soundon}
+            alt="sound"
+            className="w-10 h-10 cursor-pointer object-contain"
+            onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+          />
+        </div>
       </div>
     </section>
   );

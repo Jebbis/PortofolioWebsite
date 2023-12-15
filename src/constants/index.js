@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, laurea, tuusmet, rainmaker } from "../assets/images";
 import {
   car,
   contact,
@@ -86,8 +86,8 @@ export const experiences = [
   {
     title: "Sales Manager",
     company_name: "Tuusmet",
-    icon: starbucks,
-    iconBg: "#accbe1",
+    icon: tuusmet,
+    iconBg: "#fbc3bc",
     date: "Apr 2018 - Jan 2024",
     points: [
       "Acted as the primary point of contact for named clients, ensuring their needs were met.",
@@ -99,8 +99,8 @@ export const experiences = [
   {
     title: "Team Leader",
     company_name: "Rainmaker",
-    icon: tesla,
-    iconBg: "#fbc3bc",
+    icon: rainmaker,
+    iconBg: "#accbe1",
     date: "Sep 2017 - Mar 2018",
     points: [
       "Recruited and trained new sales personnel.",
@@ -114,7 +114,7 @@ export const schools = [
   {
     title: "Business Information Technology",
     company_name: "Laurea University of Applied Sciences",
-    icon: starbucks,
+    icon: laurea,
     iconBg: "#accbe1",
     date: "Aug 2021 - Present",
     points: [
