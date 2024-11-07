@@ -116,7 +116,7 @@ export const schools = [
     company_name: "Laurea University of Applied Sciences",
     icon: laurea,
     iconBg: "#accbe1",
-    date: "Aug 2021 - Present",
+    date: "2021 - 2024",
     points: [
       "Completed University of Helsinki MOOC Part 1+2 with Java.",
       "Other notable courses: Fullstack, SQL, RPA ",
