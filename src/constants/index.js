@@ -169,6 +169,6 @@ export const projects = [
     name: "Tuusmet Oy - Website",
     description:
       "At my previous company, there was a significant demand for modern, up-to-date websites. I took the initiative to design and develop these websites independently and updated the visual branding on the website",
-    link: "https://tuusmet.fi",
+    link: "https://www.tuusmet.fi",
   },
 ];
